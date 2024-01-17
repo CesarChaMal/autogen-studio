@@ -1,0 +1,17 @@
+python -m pip install --upgrade pip
+pip install --upgrade pip setuptools
+
+conda init bash
+conda create --name autogen-studio python=3.9
+conda activate autogen-studio
+
+pip install pyautogen && pip install autogenstudio
+
+export OPENAI_API_KEY=mytoken
+
+autogenstudio ui --port 8081
+
+-- to use open source model download with lm studio
+openhermes-2.5-mistral-7b.Q4_K_S.gguf
+
+onda deactivate
